@@ -22,8 +22,8 @@ a {
 }
 
 a:hover {
-	color: #16d9e3;
-	box-shadow: 0 0 2px #16d9e3, 0 0 10px #16d9e3;
+	color: #f8df00;
+	box-shadow: 0 0 2px #f8df00, 0 0 10px #f8df00;
 }
 
 .start {
@@ -74,9 +74,9 @@ h1 {
 }
 
 .time-btn:hover {
-	border: 2px solid #16d9e3;
-	color: #16d9e3;
-	box-shadow: 0 0 2px #16d9e3, 0 0 10px #16d9e3;
+	border: 2px solid #f8df00;
+	color: #f8df00;
+	box-shadow: 0 0 2px #f8df00, 0 0 10px #f8df00;
 }
 
 .hide {
@@ -84,7 +84,7 @@ h1 {
 }
 
 .primary {
-	color: #16d9e3;
+	color: #f8df00;
 }
 
 .board {
@@ -101,7 +101,7 @@ h1 {
 }
 
 .circle {
-	background: linear-gradient(120deg, #16d9e3 0%, #065769 66%, #002946 100%);
+	background: linear-gradient(140deg, #fcfa82 0%, #f8df00 40%, #3a3401 90%);
 	position: absolute;
 	border-radius: 50%;
 	cursor: pointer;

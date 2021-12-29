@@ -27,26 +27,6 @@ board.addEventListener("click", (event) => {
 	}
 });
 
-// function startGame() {
-// 	setInterval(decreaseTime, 1000);
-// 	createRandomCircle();
-// 	setTime(time);
-// }
-// function decreaseTime() {
-// 	if (time === 0) {
-// 		finishGame();
-// 	} else {
-// 		let current = --time;
-// 		if (current < 10) {
-// 			current = `0${current}`;
-// 		}
-// 		setTime(current);
-// 	}
-// }
-// function setTime(value) {
-// 	timeEl.innerHTML = `00:${value}`;
-// }
-
 function startGame() {
 	setInterval(decreaseTime, 1000);
 	createRandomCircle();
@@ -77,17 +57,25 @@ function finishGame() {
 function createRandomCircle() {
 	const circle = document.createElement("div");
 	const size = getRandomNumber(15, 60);
-	const { widht, height } = board.getBoundingClientRect();
+	const { width, height } = board.getBoundingClientRect();
 	const y = getRandomNumber(0, height - size);
-	const x = getRandomNumber(0, widht - size);
+	const x = getRandomNumber(0, width - size);
 	circle.classList.add("circle");
+	// const color = getRandomHexColor();
+	// circle.style.backgroundColor = color;
+	// circle.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
 	circle.style.width = `${size}px`;
 	circle.style.height = `${size}px`;
-	circle.style.top = `${y}px`;
 	circle.style.left = `${x}px`;
+	circle.style.bottom = `${y}px`;
+
 	board.append(circle);
 }
 
 function getRandomNumber(min, max) {
 	return Math.round(Math.random() * (max - min) + min);
 }
+
+// function getRandomHexColor() {
+// 	return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
